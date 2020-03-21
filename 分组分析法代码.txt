@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+data_ar=pd.read_excel(r'Desktop\data_group_analyse.xlsx',sheetname=0).values
+fig_1,axes_1=plt.subplots(1,1,dpi=100,figsize=(6,6))
+axes_1.hist(data_ar,bins=7,color=['c'])
+font = {'color':'darkred','weight':'normal','size': 16}
+axes_1.set_xlabel('Age',fontdict=font)
+axes_1.set_ylabel('Amount',fontdict=font)
+plt.show()

@@ -1,0 +1,7 @@
+import random
+data_before_normalize=[round(random.random()*100,1) for i in range(100)]
+def func_1(x,min_1,max_1):
+    return (x-min_1)/(max_1-min_1)
+
+data_after_normalize=[func_1(x,min(data_before_normalize),max(data_before_normalize)) for x in data_before_normalize ]
+data_after_normalize
